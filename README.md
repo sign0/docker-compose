@@ -16,3 +16,7 @@ with ```docker-compose``` (>= 1.25.4) + ```openssh-client``` + ```multi-rsync```
     ```bash
     $ multi-rsync $PATH_TO_THE_LOCAL_DIRECTORY $SSH_REMOTE_USERNAME@$SSH_REMOTE_IP:$PATH_TO_THE_REMOTE_DIRECTORY
     ```
+    - multi-scp :
+    ```bash
+    $ multi-scp $PATH_TO_THE_LOCAL_DIRECTORY $SSH_REMOTE_USERNAME@$SSH_REMOTE_IP:$PATH_TO_THE_REMOTE_DIRECTORY
+    ```

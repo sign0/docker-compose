@@ -11,3 +11,13 @@ services:
     logging:
       options:
         max-size: 256m
+
+  docker-compose-alpine-1-0-1-20-10-1:
+    container_name: docker-compose-20-10-1
+    image: signo/docker-compose:alpine-1.0.1-20.10.1
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    logging:
+      options:
+        max-size: 256m
