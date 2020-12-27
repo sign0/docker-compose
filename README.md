@@ -1,7 +1,6 @@
 # docker-compose
 
-Docker image forked from ```docker:20.10.1``` (alpine 3.12.3)<br>
-with ```docker-compose``` (>= 1.25.4) + ```openssh-client``` + ```multi-rsync``` + ```pigz```
+Docker image forked from ```docker:20.10.1``` (alpine 3.12.3) with ```docker-compose``` (>= 1.25.4) + ```openssh-client``` + ```multi-rsync``` + ```multi-scp``` + ```pigz```
 ## Characteristics
 
 - OS : alpine 3.12.3 (FROM docker:20.10.1)
