@@ -2,7 +2,7 @@
 
 Docker image forked from ```docker:20.10.1``` (alpine 3.12.3)<br>
 with ```docker-compose``` (>= 1.25.4) + ```openssh-client``` + ```multi-rsync``` + ```pigz```
-# Characteristics
+## Characteristics
 
 - OS : alpine 3.12.3 (FROM docker:20.10.1)
 - Packages :
