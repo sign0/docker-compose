@@ -18,5 +18,4 @@ RUN apk update &&\
     chmod +x /scripts/*.sh &&\
     ln -s /usr/bin/pigz /usr/local/bin/gzip &&\
     ln -s /usr/bin/unpigz /usr/local/bin/gunzip &&\
-    ln -s /scripts/multi-rsync.sh /usr/local/bin/multi-rsync &&\
-    ln -s /scripts/multi-scp.sh /usr/local/bin/multi-scp
+    ln -s /scripts/multi-rsync.sh /usr/local/bin/multi-rsync
