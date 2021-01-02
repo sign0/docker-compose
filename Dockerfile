@@ -6,6 +6,7 @@ RUN apk update &&\
     apk add --no-cache \
         docker-compose \
         openssh-client \
+        bash \
         rsync \
         pigz \
     &&\
