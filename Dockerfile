@@ -9,6 +9,7 @@ RUN apk update &&\
         bash \
         rsync \
         pigz \
+        util-linux \
     &&\
     mkdir -p ~/.ssh &&\
     touch ~/.ssh/known_hosts &&\
