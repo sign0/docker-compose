@@ -2,19 +2,9 @@ version: '2.2'
 
 services:
 
-  docker-compose-alpine-1-0-0-20-10-1:
-    container_name: docker-compose-20-10-1
-    image: signo/docker-compose:alpine-1.0.0-20.10.1
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
-    logging:
-      options:
-        max-size: 256m
-
-  docker-compose-alpine-1-0-1-20-10-1:
-    container_name: docker-compose-20-10-1
-    image: signo/docker-compose:alpine-1.0.1-20.10.1
+  docker-compose-23.0.4-alpine3.17-1.0.0:
+    container_name: docker-compose-23.0.4-alpine3.17-1.0.0
+    image: signo/docker-compose:23.0.4-alpine3.17-1.0.0
     build:
       context: ./
       dockerfile: ./Dockerfile

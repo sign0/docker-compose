@@ -1,22 +1,20 @@
-FROM docker:20.10.1
+FROM docker:23.0.4-alpine3.17
 
 COPY ./scripts/ /scripts/
 
 RUN apk update &&\
     apk add --no-cache \
-        docker-compose \
         openssh-client \
+        openssl \
+        bash \
+        git \
+        direnv \
         rsync \
         pigz \
+        curl \
     &&\
-    mkdir -p ~/.ssh &&\
-    touch ~/.ssh/known_hosts &&\
-    touch ~/.ssh/authorized_keys &&\
-    touch ~/.ssh/id_rsa &&\
-    touch ~/.ssh/id_rsa.pub &&\
-    chmod -R 600 ~/.ssh &&\
-    chmod +x /scripts/*.sh &&\
     ln -s /usr/bin/pigz /usr/local/bin/gzip &&\
     ln -s /usr/bin/unpigz /usr/local/bin/gunzip &&\
     ln -s /scripts/multi-rsync.sh /usr/local/bin/multi-rsync &&\
-    ln -s /scripts/multi-scp.sh /usr/local/bin/multi-scp
+    echo 'eval "$(direnv hook bash)"' >> /root/.bashrc &&\
+    sed -i "1s/.*/root:x:0:0:root:\/root:\/bin\/bash/" /etc/passwd
